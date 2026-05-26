@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "google.com",
+        "googleapis.com",
+        "npmjs.org",
+        "registry.npmjs.org"
+      ]
+    }
+  ]
+}
