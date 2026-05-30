@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain_suffix": [
+"itunes.apple.com",
 "ls.apple.com",
 "contacts.icloud.com",
 "ecs.office.com",
