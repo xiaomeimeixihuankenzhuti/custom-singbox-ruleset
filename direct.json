@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain_suffix": [
+"kt-prod.ess.apple.com",
 "configuration.ls.apple.com",
 "courier.push.apple.com",
 "caldav.icloud.com",
