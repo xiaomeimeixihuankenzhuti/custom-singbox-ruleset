@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain_suffix": [
+"ecs.office.com",
 "images-eds-ssl.xboxlive.com",
 "kt-prod.ess.apple.com",
 "configuration.ls.apple.com",
