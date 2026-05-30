@@ -4,6 +4,7 @@
     {
       "domain_suffix": [
         ".cn",
+"client.wns.windows.com",
 "wasu.tv",
 "snssdk.com",
 "aliapp.org",
