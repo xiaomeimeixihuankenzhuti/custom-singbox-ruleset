@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain_suffix": [
+"caldav.icloud.com",
 "tether.edge.apple",
 "gateway.icloud.com",
         ".cn",
