@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain_suffix": [
+"gdmf.apple.com",
 "itunes.apple.com",
 "ls.apple.com",
 "contacts.icloud.com",
