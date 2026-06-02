@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain_suffix": [
+"activity.windows.com",
 "fmf.icloud.com",
 "gdmf.apple.com",
 "probe.icloud.com",
