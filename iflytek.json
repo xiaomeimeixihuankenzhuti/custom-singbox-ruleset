@@ -21,8 +21,8 @@
       "domain_suffix": [
       "itsmsdp.iflytek.com",
       "stc-ftgl.iflytek.cn",
-	"in.iflytek.com",
-	"performance.iflytek.com",
+        "in.iflytek.com",
+        "performance.iflytek.com",
         "iflyapp.iflytek.com",
         "stats.iflytek.com",
         "llme.iflytek.com",
@@ -69,7 +69,6 @@
         "itil.iflytek.com",
         "ebg.iflytek.com",
         "rp.iflytek.cn",
-        "soft.iflytek.com ",
         "cbb.iflytek.com",
         "knowledge.iflytek.com",
         "e3.iflytek.com",
@@ -80,7 +79,7 @@
         "corpknowledgebase-test.iflytek.com",
         "obu-test.iflytek.com",
         "tomp.iflytek.com",
-	"imds.ai"
+        "imds.ai"
       ]
     }
   ]
