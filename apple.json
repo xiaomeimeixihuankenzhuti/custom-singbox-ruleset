@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "gdmf.apple.com",
+        "itunes.apple.com",
+        "ls.apple.com",
+        "ess.apple.com",
+        "push.apple.com",
+        "fmf.icloud.com",
+        "probe.icloud.com",
+        "contacts.icloud.com",
+        "gateway.icloud.com",
+        "caldav.icloud.com",
+        "tether.edge.apple"
+      ]
+    }
+  ]
+}
