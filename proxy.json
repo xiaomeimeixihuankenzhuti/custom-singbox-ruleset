@@ -6,7 +6,8 @@
         "google.com",
         "googleapis.com",
         "npmjs.org",
-        "registry.npmjs.org"
+        "registry.npmjs.org",
+	"etahub.com"
       ]
     }
   ]
