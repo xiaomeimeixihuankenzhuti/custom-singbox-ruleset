@@ -10,6 +10,7 @@ Sing-box 自定义规则集，用于管理网络流量的路由规则。
 | `proxy.json` | 代理规则 - 定义需要走代理的域名 |
 | `iflytek.json` | 科大讯飞内部规则 - 包含 IP 段和域名规则 |
 | `iflytek-domain.json` | 科大讯飞域名规则（与 iflytek.json 部分重复，建议合并） |
+| `block-trackers.json` | 自建追踪域名列表，供网关与客户端在 DNS / route 层执行 `reject` |
 
 ## 规则格式
 

@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "athena-api.oceanengine.com",
+        "bugtrace.3g.qq.com",
+        "bugtrace.meitu.city",
+        "cgp.snssdk.com",
+        "pl-report-zj.migufun.com",
+        "pl-report.yuntiancloud.com",
+        "rtapplog.snssdk.com",
+        "rtlog.snssdk.com",
+        "stat.api.tpns.tencent.com",
+        "tracker-preview.ai.xiaomi.com",
+        "tracker-preview.xiaomixiaoai.com",
+        "tracker-staging.ai.srv",
+        "uplog.qbox.me"
+      ]
+    }
+  ]
+}
