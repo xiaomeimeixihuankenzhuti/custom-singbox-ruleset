@@ -51,8 +51,17 @@ Sing-box 自定义规则集，用于管理网络流量的路由规则。
 `custom-direct` 在 `dns.rules` 中排在广告拦截规则**之后**（见
 `/etc/sing-box/config.json`，reject 规则在前，`custom-direct` 在第 74 行）：
 
-1. `custom-block`、`hagezi-pro` / `anti-ad-srs` 先执行 `reject`；
+1. `custom-block`、`hagezi-pro` / `anti-ad-srs` / `hagezi-doh` 先执行 `reject`；
 2. 未被拦截的域名才轮到 `custom-direct`，命中后选择 `local` DNS 服务器。
+
+### 加密 DNS（DoH / DoT）
+
+- **DoT**：route 层直接 `reject` 853 端口（tcp/udp）。加密 DNS 无法被
+  `hijack-dns` 识别，只能在端口层封堵。
+- **DoH**：靠 `hagezi-doh` 域名集在 DNS 层拦截（`dns.google`、
+  `cloudflare-dns.com` 等 3,572 条）。
+- 残留风险：客户端**硬编码 IP** 的 DoH 绕过域名集；443 端口不能整体封禁，
+  否则会断掉正常 HTTPS。
 
 因此 **`direct.json` 不产生任何拦截豁免**：把域名写进来只能决定"用哪个 DNS
 解析器"，不能决定"要不要拦截"。
