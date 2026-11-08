@@ -58,10 +58,14 @@ Sing-box 自定义规则集，用于管理网络流量的路由规则。
 
 - **DoT**：route 层直接 `reject` 853 端口（tcp/udp）。加密 DNS 无法被
   `hijack-dns` 识别，只能在端口层封堵。
-- **DoH**：靠 `hagezi-doh` 域名集在 DNS 层拦截（`dns.google`、
+- **DoH（DNS 层）**：靠 `hagezi-doh` 域名集在 DNS 层拦截（`dns.google`、
   `cloudflare-dns.com` 等 3,572 条）。
-- 残留风险：客户端**硬编码 IP** 的 DoH 绕过域名集；443 端口不能整体封禁，
-  否则会断掉正常 HTTPS。
+- **DoH（SNI 层）**：route 规则在 `sniff` 之后按 TLS SNI 匹配 `hagezi-doh`，
+  覆盖“硬编码 IP、不查 DNS”的客户端。判据是 ClientHello 里的域名，
+  同一 IP 上的其他站点不受影响。
+- 残留风险：启用 **ECH**（加密 SNI）或不发送 SNI 的客户端；443 端口不能整体
+  封禁，否则会断掉正常 HTTPS。注意列表含 `alidns.com`、`doh.pub`、
+  `doh.360.cn`，国内 App 若不回落到系统 DNS 可能受影响。
 
 因此 **`direct.json` 不产生任何拦截豁免**：把域名写进来只能决定"用哪个 DNS
 解析器"，不能决定"要不要拦截"。
