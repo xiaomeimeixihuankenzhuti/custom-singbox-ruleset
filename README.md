@@ -51,7 +51,7 @@ Sing-box 自定义规则集，用于管理网络流量的路由规则。
 `custom-direct` 在 `dns.rules` 中排在广告拦截规则**之后**（见
 `/etc/sing-box/config.json`，reject 规则在前，`custom-direct` 在第 74 行）：
 
-1. `custom-block`、`adguard-ads` / `anti-ad-srs` 先执行 `reject`；
+1. `custom-block`、`hagezi-pro` / `anti-ad-srs` 先执行 `reject`；
 2. 未被拦截的域名才轮到 `custom-direct`，命中后选择 `local` DNS 服务器。
 
 因此 **`direct.json` 不产生任何拦截豁免**：把域名写进来只能决定"用哪个 DNS
@@ -84,7 +84,7 @@ PCDN 白名单（config.json 中内联的 `domain_suffix` + `server: local`）�
 - 同日第二轮：再移除 9 条与广告/推送拦截列表重叠的死路由条目
   （`getui.com`、`getui.net`、`jpush.io`、`pangle.io`、`sigmob.com`、
   `anythinktech.com`、`easytomessage.com`、`gepush.com`、`trace.rtbasia.com`），
-  `direct.json` 从 52 条精简到 43 条。这些域名已被 `adguard-ads` /
+  `direct.json` 从 52 条精简到 43 条。这些域名已被 `hagezi-pro` /
   `anti-ad-srs` 在 DNS 层拦截，`direct.json` 中的路由条目永远不会生效。
 - 保留的 43 条是 `ChinaMaxNoIP` 未覆盖的长尾域名，主要是国内 CDN/DNS 调度域名
   （如 `kwcdn.com`、`queniu*.com`、`kunlun*.com`）和必须强制直连的境外服务
